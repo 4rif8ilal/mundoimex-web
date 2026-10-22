@@ -63,7 +63,7 @@ Ayrıntılar için [DESIGN.md](DESIGN.md).
 
 ## Açık noktalar
 
-- Logo, 59×61 piksellik GIF'ten SVG olarak yeniden çizildi; kurumsal kimlik dosyası (AI/SVG) varsa onunla değiştirilmeli.
+- Logo, yüksek çözünürlüklü saydam görselden (`reference/mundologo-hq.webp`) kürenin merkezi ortada kalacak şekilde kırpılıp küçültülmüştür (`reference/prepare-logo.mjs`); kurumsal kimlik dosyası (AI/SVG) varsa onunla değiştirilmeli.
 - `public/img` içindeki araç görseli eski siteden ve düşük çözünürlüklü.
 - Formlar gerçek bir e-posta/API servisine bağlı değil; kariyer formunda CV eki için bir sunucu gerekir.
 

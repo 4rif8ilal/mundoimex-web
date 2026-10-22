@@ -44,7 +44,7 @@ npm run dev
 
 ## Açık noktalar
 
-- Logo GIF'ten SVG olarak yeniden çizildi; kurumsal kimlik dosyası (AI/SVG) varsa değiştirilmeli.
+- Logo, yüksek çözünürlüklü saydam WebP; kürenin merkezi görselin ortasında, böylece yerinde döner. Kurumsal kimlik dosyası (AI/SVG) varsa değiştirilmeli.
 - Araç görselleri (`public/img`) eski siteden, düşük çözünürlüklü; yüksek çözünürlüklü sürümleri istenmeli.
 - Formlar gerçek bir e-posta/API servisine bağlanmadı (şimdilik `mailto:`). Kariyer formunda CV eki için dosya yükleme backend gerektirir.
 - Sitedeki metinlerde yazım hataları düzeltildi ve tekrar eden maddeler birleştirildi (`src/data/content.js`).

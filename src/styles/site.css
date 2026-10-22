@@ -200,6 +200,10 @@
 
 .emblem {
   flex: none;
+  width: var(--emblem-size);
+  height: var(--emblem-size);
+  aspect-ratio: 1;
+  object-fit: contain;
 }
 .emblem--spin {
   animation: spin 90s linear infinite;
