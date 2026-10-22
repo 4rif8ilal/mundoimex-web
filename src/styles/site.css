@@ -1016,6 +1016,18 @@
   background: var(--navy);
   color: #fff;
 }
+/* Telefonda sekmeler düzensiz sarmak yerine 2×2 ızgara */
+@media (max-width: 520px) {
+  .tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    border-radius: 22px;
+  }
+  .tabs__btn {
+    padding: 0 12px;
+  }
+}
 
 .customs__panel {
   margin-top: clamp(28px, 4vw, 48px);
@@ -1354,8 +1366,25 @@
 .info-grid {
   display: grid;
   gap: clamp(20px, 3vw, 32px);
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   align-items: start;
+}
+/* Üç kart: tek sütundan doğrudan üç sütuna (tablette tek başına kalan kart olmasın) */
+@media (min-width: 640px) {
+  .info-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+  /* Yan yana kartlar eşit boyda */
+  .info-grid > * {
+    display: flex;
+  }
+  .info-grid .info-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-grid .info-card__inner {
+    flex: 1;
+  }
 }
 .info-card {
   --rotation: 0deg;
@@ -1758,10 +1787,14 @@
 }
 .footer__links {
   display: grid;
-  gap: 10px;
+  justify-items: start;
 }
+/* Dokunmatik ekranda rahat basılsın diye her bağlantı en az 36px yüksek */
 .footer__links a,
 .footer__links button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
   color: var(--ink-inverse);
   font-size: 0.9375rem;
   text-align: left;
@@ -1897,6 +1930,7 @@
   flex: none;
 }
 .orbit__chip--free {
+  --tx: -50%;
   left: var(--x);
   top: var(--y);
   animation: chip-float 7s ease-in-out infinite;
@@ -1905,10 +1939,22 @@
 @keyframes chip-float {
   0%,
   100% {
-    transform: translate(-50%, -50%);
+    transform: translate(var(--tx), -50%);
   }
   50% {
-    transform: translate(-50%, calc(-50% - 6px));
+    transform: translate(var(--tx), calc(-50% - 6px));
+  }
+}
+/* Dar ekranda etiket, konumu kadar orantılı kayar (%12'deki etiket kendi genişliğinin %12'si kadar):
+   böylece kenardaki etiketler kutunun dışına taşmaz */
+@media (max-width: 640px) {
+  .orbit__chip--free {
+    --tx: calc(var(--x) * -1);
+  }
+  .orbit__chip {
+    gap: 6px;
+    padding: 7px 12px;
+    font-size: 0.8125rem;
   }
 }
 
