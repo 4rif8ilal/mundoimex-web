@@ -62,9 +62,8 @@ export function AboutPage() {
               Mundoimex’in yolculuğu
             </Reveal>
           </div>
-          <Reveal i={1}>
-            <Timeline steps={timeline} />
-          </Reveal>
+          {/* Reveal ile sarılmaz: çok uzun (scroll ile sabitlenen) alan, görünürlük eşiğine geç ulaşır. */}
+          <Timeline steps={timeline} />
         </div>
       </section>
 
