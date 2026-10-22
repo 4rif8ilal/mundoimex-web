@@ -651,7 +651,11 @@
   transform-origin: 50% 0;
   transition: background-color 0.8s var(--ease);
 }
-.tl__fill-x {
+/* Büyüme noktası: dikey dolgu üstten, yatay dolgu soldan başlar (.tl__rail-line span kuralını ezer). */
+.tl__rail-line .tl__fill-y {
+  transform-origin: 50% 0;
+}
+.tl__rail-line .tl__fill-x {
   display: none;
   transform-origin: 0 50%;
 }
@@ -845,10 +849,10 @@
     width: auto;
     height: 2px;
   }
-  .tl__fill-y {
+  .tl__rail-line .tl__fill-y {
     display: none;
   }
-  .tl__fill-x {
+  .tl__rail-line .tl__fill-x {
     display: block;
   }
   .tl__node {
