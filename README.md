@@ -1,6 +1,8 @@
 # Mundoimex Web
 
 [Mundoimex Global Lojistik ve Gümrük Müşavirliği](https://mundoimex.com/) için sıfırdan yazılmış React arayüzü.
+**Canlı demo: https://4rif8ilal.github.io/mundoimex-web/**
+
 Amaç: ziyaretçi en gerekli bilgiyi görsün ve en kısa sürede aksiyon alsın (teklif, telefon, e-posta, adres).
 Marka tarihçesi, kalite politikası ve logonun hikâyesi ana sayfadan ayrılıp kendi sayfasına taşındı.
 
@@ -24,6 +26,12 @@ npm run dev
 ```
 
 Üretim derlemesi için `npm run build`, derlemeyi denemek için `npm run preview`.
+
+Canlı demoyu güncellemek için (derler ve `gh-pages` dalına gönderir; GitHub Pages bu daldan yayın yapar):
+
+```bash
+npm run deploy
+```
 
 ## Teknoloji
 
